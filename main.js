@@ -11,7 +11,7 @@
   enos: 0,
   fairview: 0,
   gehrmann: 0,
-  gietl: 0,
+  gietl: 3.8,
   gurgens: 0,
   hobbs: 0,
   iles: 0,
@@ -78,8 +78,6 @@
         const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
         document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded;
         document.querySelector(`.${rating} .number-rating`).innerHTML = ratings[rating];
-
       }
     }
 
-    

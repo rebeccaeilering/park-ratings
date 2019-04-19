@@ -4,13 +4,13 @@
 }
 
 body {
-  background-color: #2aaf74;
-  background-image: url('background.svg');
+  background-color: #639a67;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 16px;
   color: #222;
   position: relative;
   padding-bottom: 50px;
+  letter-spacing: .5px;
 }
 
 body::after {
@@ -29,7 +29,15 @@ body::after {
 h1 {
   text-transform: uppercase;
   margin-bottom: 10px;
-  color: #111;
+  color: #ffffff;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 60px;
+  }
 }
 
 h2 {
@@ -41,29 +49,55 @@ sup {
   font-size: 16px;
 }
 
-.container {
-  margin: 10px;
-  background-color: #f5f5f5;
-  z-index: 1;
+.inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+header {
+  background-image: url('background.svg');
+  height: 25vh;
+}
+header .inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 @media (min-width: 600px) {
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    box-shadow: 0px 5px 9px #000;
-  }
-}
-
-@media (min-width: 980px) {
-  .container {
-    width: 50%;
+  header {
+    height: 50vh;
   }
 }
 
 .title {
-  padding: 20px 25px;
-  border-bottom: 3px solid #2aaf74;
+  color: #ffffff;
+  padding: 20px;
+}
+
+@media (min-width: 600px) {
+  .title {
+    padding: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .title {
+    text-align: left;
+  }
+}
+
+.intro {
+  background-color: #446d47;
+  padding: 30px 20px;
+  border-top: 2px solid #49c78f;
+  border-bottom: 2px solid #49c78f;
+  color: #ffffff;
+}
+
+.container {
+  background-color: #f5f5f5;
+  z-index: 1;
 }
 
 .inner-content {

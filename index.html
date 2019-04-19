@@ -12,11 +12,19 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="title">
-      <h1>Springfield, IL Parks Rater<sup>*</sup></h1>
+  <header>
+    <div class="inner">
+      <div class="title">
+          <h1>Springfield Parks Rater</h1>
+      </div>
+    </div>
+  </header>
+  <section class="intro">
+    <div class="inner">
       <p>All public Springfield Park District parks except for golf courses, zoos, and baseball stadiums.</p>
     </div>
+  </section>
+  <main class="container">
     <!-- <select name="park select" id="park-select" class="custom-select">
       <option value="0" disabled selected>Select Park</option>
       <option value="carpenter">Carpenter Park</option>
@@ -26,7 +34,7 @@
       <option value="washington">Washington Park</option>
     </select>
     <input type="number" id="rating-control" step="0.1" max="5" name="rating control" placeholder="Rate 1 - 5" disabled> -->
-    <div class="inner-content">
+    <div class="inner inner-content">
       <div class="park barker">
         <h2>Paul A. Barker Park</h2>
         <div class="rating-outer">
@@ -537,10 +545,10 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+    </main>
+    <footer class="footer">
       <small><sup>*</sup> is just the opinion of the author of this page.</small>
-    </div>
+    </footer>
   </div>
   <script src="main.js"></script>
 </body>
