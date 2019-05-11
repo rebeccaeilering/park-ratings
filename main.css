@@ -4,26 +4,12 @@
 }
 
 body {
-  background-color: #639a67;
+  background-color: #f5f5f5;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 16px;
   color: #222;
   position: relative;
-  padding-bottom: 50px;
   letter-spacing: .5px;
-}
-
-body::after {
-  position: absolute;
-  content: "";
-  background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5));
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
 }
 
 h1 {
@@ -55,7 +41,10 @@ sup {
 }
 
 header {
-  background-image: url('background.svg');
+  background-image: url('img/golf-grass-lawn-2336.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 25vh;
 }
 header .inner {
@@ -73,6 +62,7 @@ header .inner {
 .title {
   color: #ffffff;
   padding: 20px;
+  text-shadow: 5px 5px 10px rgba(0,0,0,1);
 }
 
 @media (min-width: 600px) {
@@ -88,10 +78,10 @@ header .inner {
 }
 
 .intro {
-  background-color: #446d47;
+  background-color: #3e5413;
   padding: 30px 20px;
-  border-top: 2px solid #49c78f;
-  border-bottom: 2px solid #49c78f;
+  border-top: 2px solid #839a2b;
+  border-bottom: 2px solid #839a2b;
   color: #ffffff;
 }
 
@@ -116,7 +106,12 @@ small sup {
 .park {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #2aaf74;
+  border-bottom: 1px solid #839a2b;
+}
+
+.park:last-of-type {
+  border-bottom: none;
+
 }
 
 .stars-outer {
@@ -149,5 +144,9 @@ small sup {
 }
 
 .footer {
-  padding: 0 25px 25px;
+  height: 50px;
+  padding: 25px;
+  background-color: #3e5413;
+  border-top: 2px solid #839a2b;
+  color: #ffffff;
 }

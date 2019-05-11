@@ -1,4 +1,178 @@
- // imital ratings
+const parks = [
+  {
+    "name": "Barker",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Cadigan",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Carpenter",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Centinnial",
+    "rating": 3.3,
+    "notes": ""
+  },
+  {
+    "name": "Corner Cox",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Douglas",
+    "rating": 3,
+    "notes": ""
+  },
+  {
+    "name": "Dreamland",
+    "rating": 2.3,
+    "notes": ""
+  },
+  {
+    "name": "Eisenhower",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Enos",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Fairview",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Gehrmann",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Gietl",
+    "rating": 3.3,
+    "notes": ""
+  },
+  {
+    "name": "Gurgens",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Hobbs",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Iles",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Indian Hills",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Jaycee",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Jefferson",
+    "rating": 2.2,
+    "notes": ""
+  },
+  {
+    "name": "Kennedy",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Kiwanis",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Lake Victoria",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Lamphier",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Lawless",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Lincoln",
+    "rating": 4.5,
+    "notes": ""
+  },
+  {
+    "name": "Lindbergh",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Riverside",
+    "rating": 2.3,
+    "notes": ""
+  },
+  {
+    "name": "Rotary",
+    "rating": 3.5,
+    "notes": ""
+  },
+  {
+    "name": "Schlitt",
+    "rating": 2,
+    "notes": ""
+  },
+  {
+    "name": "Southwind",
+    "rating": 3.3,
+    "notes": ""
+  },
+  {
+    "name": "Stewart",
+    "rating": 4,
+    "notes": ""
+  },
+  {
+    "name": "Timberbrooke",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Vredenburgh",
+    "rating": 0,
+    "notes": ""
+  },
+  {
+    "name": "Washington",
+    "rating": 4.8,
+    "notes": ""
+  },
+  {
+    "name": "Winchester",
+    "rating": 0,
+    "notes": ""
+  },
+];
+
+
+// imital ratings
  const ratings = {
   barker: 0,
   cadigan: 0,
