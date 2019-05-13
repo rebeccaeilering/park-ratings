@@ -1,171 +1,205 @@
 const parks = [
   {
-    "name": "barker",
+    "name": "Barker",
+    "class": "barker",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "cadigan",
+    "name": "Cadigan",
+    "class": "cadigan",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "carpenter",
+    "name": "Carpenter",
+    "class": "carpenter",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "centinnial",
+    "name": "Centinnial",
+    "class": "centinnial",
     "rating": 3.3,
     "notes": ""
   },
   {
-    "name": "cornercox",
+    "name": "Corner Cox",
+    "class": "cornercox",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "douglas",
+    "name": "Douglas",
+    "class": "douglas",
     "rating": 3,
     "notes": ""
   },
   {
-    "name": "dreamland",
+    "name": "Dreamland",
+    "class": "dreamland",
     "rating": 2.3,
     "notes": ""
   },
   {
-    "name": "eisenhower",
+    "name": "Eisenhower",
+    "class": "eisenhower",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "enos",
+    "name": "Enos",
+    "class": "enos",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "fairview",
+    "name": "Fairview",
+    "class": "fairview",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "gehrmann",
+    "name": "Gehrmann",
+    "class": "gehrmann",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "gietl",
+    "name": "Gietl",
+    "class": "gietl",
     "rating": 3.3,
     "notes": ""
   },
   {
-    "name": "gurgens",
+    "name": "Gurgens",
+    "class": "gurgens",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "hobbs",
+    "name": "Hobbs",
+    "class": "hobbs",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "iles",
+    "name": "Iles",
+    "class": "iles",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "indianhills",
+    "name": "Indian Hills",
+    "class": "indianhills",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "jaycee",
+    "name": "Jaycee",
+    "class": "jaycee",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "jefferson",
+    "name": "Jefferson",
+    "class": "jefferson",
     "rating": 2.2,
     "notes": ""
   },
   {
-    "name": "kennedy",
+    "name": "Kennedy",
+    "class": "kennedy",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "kiwanis",
+    "name": "Kiwanis",
+    "class": "kiwanis",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "lakevictoria",
+    "name": "Lake Victoria",
+    "class": "lakevictoria",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "lanphier",
+    "name": "Lanphier",
+    "class": "lanphier",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "lawless",
+    "name": "Lawless",
+    "class": "lawless",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "lincoln",
+    "name": "Lincoln",
+    "class": "lincoln",
     "rating": 4.5,
     "notes": ""
   },
   {
-    "name": "lindbergh",
+    "name": "Lindbergh",
+    "class": "lindbergh",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "riverside",
+    "name": "Riverside",
+    "class": "riverside",
     "rating": 2.3,
     "notes": ""
   },
   {
-    "name": "rotary",
+    "name": "Rotary",
+    "class": "rotary",
     "rating": 3.5,
     "notes": ""
   },
   {
-    "name": "schlitt",
+    "name": "Schlitt",
+    "class": "schlitt",
     "rating": 2,
     "notes": ""
   },
   {
-    "name": "southwind",
+    "name": "Southwind",
+    "class": "southwind",
     "rating": 3.3,
     "notes": ""
   },
   {
-    "name": "stuart",
+    "name": "Stuart",
+    "class": "stuart",
     "rating": 4,
     "notes": ""
   },
   {
-    "name": "timberbrooke",
+    "name": "Timberbrooke",
+    "class": "timberbrooke",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "vredenburgh",
+    "name": "Vredenburgh",
+    "class": "vredenburgh",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "washington",
+    "name": "Washington",
+    "class": "washington",
     "rating": 4.8,
     "notes": ""
   },
   {
-    "name": "winchester",
+    "name": "Winchester",
+    "class": "winchester",
     "rating": 0,
     "notes": ""
   }
@@ -176,6 +210,8 @@ const parks = [
 
     // run getRatings when DOM loads
     document.addEventListener('DOMContentLoaded', getParks);
+    // document.addEventListener('DOMContentLoaded', getRatings);
+
 
     // form elements
     // const parkSelect = document.getElementById('park-select');
@@ -207,13 +243,50 @@ const parks = [
     // })
 
     function getParks() {
+      let output = '';
       for(let park in parks) {
-        console.log(`This is ${parks[park].name}`);
         const starPercentage = (parks[park].rating / starsTotal) * 100;
         const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
-        console.log(starPercentageRounded);
-        document.querySelector(`.${parks[park].name} .stars-inner`).style.width = starPercentageRounded;
-        document.querySelector(`.${parks[park].name} .number-rating`).innerHTML = parks[park].rating;
+        output += 
+        // '<div class="park ' + parks[park].name + '">' +
+        //     '<h2>' + parks[park].name + '</h2>' +
+        //     '<div class="rating-outer">' +
+        //       '<div class="rating">' +
+        //         '<span>Score: </span>' +
+        //         '<div class="stars-outer">' +
+        //           '<span class="number-rating">' + parks[park].rating + '</span>' +
+        //           '<div class="stars-inner" style="width:' + starPercentageRounded + '";></div>' +
+        //         '</div>' +
+        //         '<div class="review"><p>A short description of what I think of the park.</p>' +
+        //         '</div>' +
+        //       '</div>' +
+        //     '</div>' +
+        // '</div>';
+      `<div class="park ${parks[park].class}">
+        <h2>${parks[park].name}</h2>
+        <div class="rating-outer">
+          <div class="rating">
+            <span>Score: </span>
+            <div class="stars-outer">
+              <span class="number-rating">${parks[park].rating}</span>
+              <div class="stars-inner" style="width:${starPercentageRounded}";></div>
+            </div>
+            <div class="review"><p>${parks[park].notes}</p>
+            </div>
+          </div>
+        </div>
+      </div>`;
       }
+      document.getElementById('parks').innerHTML = output;
     }
+
+    // function getRatings() {
+    //   for(let park in parks) {
+    //     const starPercentage = (parks[park].rating / starsTotal) * 100;
+    //     const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
+    //     document.querySelector(`.${parks[park].name} .stars-inner`).style.width = starPercentageRounded;
+    //     document.querySelector(`.${parks[park].name} .number-rating`).innerHTML = parks[park].rating;
+    //   }
+    // }
+
 
