@@ -248,34 +248,20 @@ const parks = [
         const starPercentage = (parks[park].rating / starsTotal) * 100;
         const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
         output += 
-        // '<div class="park ' + parks[park].name + '">' +
-        //     '<h2>' + parks[park].name + '</h2>' +
-        //     '<div class="rating-outer">' +
-        //       '<div class="rating">' +
-        //         '<span>Score: </span>' +
-        //         '<div class="stars-outer">' +
-        //           '<span class="number-rating">' + parks[park].rating + '</span>' +
-        //           '<div class="stars-inner" style="width:' + starPercentageRounded + '";></div>' +
-        //         '</div>' +
-        //         '<div class="review"><p>A short description of what I think of the park.</p>' +
-        //         '</div>' +
-        //       '</div>' +
-        //     '</div>' +
-        // '</div>';
-      `<div class="park ${parks[park].class}">
-        <h2>${parks[park].name}</h2>
-        <div class="rating-outer">
-          <div class="rating">
-            <span>Score: </span>
-            <div class="stars-outer">
-              <span class="number-rating">${parks[park].rating}</span>
-              <div class="stars-inner" style="width:${starPercentageRounded}";></div>
-            </div>
-            <div class="review"><p>${parks[park].notes}</p>
+        `<div class="park ${parks[park].class}">
+          <h2>${parks[park].name}</h2>
+          <div class="rating-outer">
+            <div class="rating">
+              <span>Score: </span>
+              <div class="stars-outer">
+                <span class="number-rating">${parks[park].rating}</span>
+                <div class="stars-inner" style="width:${starPercentageRounded}";></div>
+              </div>
+              <div class="review"><p>${parks[park].notes}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>`;
+        </div>`;
       }
       document.getElementById('parks').innerHTML = output;
     }
