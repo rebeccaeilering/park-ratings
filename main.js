@@ -1,220 +1,181 @@
 const parks = [
   {
-    "name": "Barker",
+    "name": "barker",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Cadigan",
+    "name": "cadigan",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Carpenter",
+    "name": "carpenter",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Centinnial",
+    "name": "centinnial",
     "rating": 3.3,
     "notes": ""
   },
   {
-    "name": "Corner Cox",
+    "name": "cornercox",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Douglas",
+    "name": "douglas",
     "rating": 3,
     "notes": ""
   },
   {
-    "name": "Dreamland",
+    "name": "dreamland",
     "rating": 2.3,
     "notes": ""
   },
   {
-    "name": "Eisenhower",
+    "name": "eisenhower",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Enos",
+    "name": "enos",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Fairview",
+    "name": "fairview",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Gehrmann",
+    "name": "gehrmann",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Gietl",
+    "name": "gietl",
     "rating": 3.3,
     "notes": ""
   },
   {
-    "name": "Gurgens",
+    "name": "gurgens",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Hobbs",
+    "name": "hobbs",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Iles",
+    "name": "iles",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Indian Hills",
+    "name": "indianhills",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Jaycee",
+    "name": "jaycee",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Jefferson",
+    "name": "jefferson",
     "rating": 2.2,
     "notes": ""
   },
   {
-    "name": "Kennedy",
+    "name": "kennedy",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Kiwanis",
+    "name": "kiwanis",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Lake Victoria",
+    "name": "lakevictoria",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Lamphier",
+    "name": "lanphier",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Lawless",
+    "name": "lawless",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Lincoln",
+    "name": "lincoln",
     "rating": 4.5,
     "notes": ""
   },
   {
-    "name": "Lindbergh",
+    "name": "lindbergh",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Riverside",
+    "name": "riverside",
     "rating": 2.3,
     "notes": ""
   },
   {
-    "name": "Rotary",
+    "name": "rotary",
     "rating": 3.5,
     "notes": ""
   },
   {
-    "name": "Schlitt",
+    "name": "schlitt",
     "rating": 2,
     "notes": ""
   },
   {
-    "name": "Southwind",
+    "name": "southwind",
     "rating": 3.3,
     "notes": ""
   },
   {
-    "name": "Stewart",
+    "name": "stuart",
     "rating": 4,
     "notes": ""
   },
   {
-    "name": "Timberbrooke",
+    "name": "timberbrooke",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Vredenburgh",
+    "name": "vredenburgh",
     "rating": 0,
     "notes": ""
   },
   {
-    "name": "Washington",
+    "name": "washington",
     "rating": 4.8,
     "notes": ""
   },
   {
-    "name": "Winchester",
+    "name": "winchester",
     "rating": 0,
     "notes": ""
-  },
+  }
 ];
-
-
-// imital ratings
- const ratings = {
-  barker: 0,
-  cadigan: 0,
-  carpenter: 4,
-  centinnial: 3.3,
-  cornercox: 0,
-  douglas: 3,
-  dreamland: 2.3,
-  eisenhower: 0,
-  enos: 0,
-  fairview: 0,
-  gehrmann: 0,
-  gietl: 3.3,
-  gurgens: 0,
-  hobbs: 0,
-  iles: 0,
-  indianhills: 0,
-  jaycee: 0,
-  jefferson: 2.2,
-  kennedy: 0,
-  kiwanis: 0,
-  lakevictoria: 0,
-  lanphier: 0,
-  lawless: 0,
-  lincoln: 4.5,
-  lindbergh: 0,
-  riverside: 2.3,
-  rotary: 3.5,
-  schlitt: 2,
-  southwind: 3.3,
-  stuart: 4,
-  timberbrooke: 0,
-  vredenburgh: 0,
-  washington: 4.8,
-  winchester: 0
-}
 
     // total stars
     const starsTotal = 5;
 
     // run getRatings when DOM loads
-    document.addEventListener('DOMContentLoaded', getRatings);
+    document.addEventListener('DOMContentLoaded', getParks);
 
     // form elements
     // const parkSelect = document.getElementById('park-select');
@@ -245,13 +206,14 @@ const parks = [
     //   getRatings();
     // })
 
-    // get ratings
-    function getRatings() {
-      for(let rating in ratings) {
-        const starPercentage = (ratings[rating] / starsTotal) * 100;
+    function getParks() {
+      for(let park in parks) {
+        console.log(`This is ${parks[park].name}`);
+        const starPercentage = (parks[park].rating / starsTotal) * 100;
         const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
-        document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded;
-        document.querySelector(`.${rating} .number-rating`).innerHTML = ratings[rating];
+        console.log(starPercentageRounded);
+        document.querySelector(`.${parks[park].name} .stars-inner`).style.width = starPercentageRounded;
+        document.querySelector(`.${parks[park].name} .number-rating`).innerHTML = parks[park].rating;
       }
     }
 
