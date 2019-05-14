@@ -194,10 +194,10 @@ const parks = [
   {
     "name": "Lindbergh",
     "class": "lindbergh",
-    "rating": 0,
+    "rating": 2,
     "location": "",
     "url": "",
-    "notes": "Haven't visited yet."
+    "notes": "Flat park with a lot of open space for soccer fields. Has a playground, some ball fields, and a tennis court. Tennis court could use some work. There's shade around the playground."
   },
   {
     "name": "Riverside",
@@ -264,12 +264,12 @@ const parks = [
     "notes": "This is my favorite park. Lots of walking areas from hiking types of trails, paved trails, and marked off areas on the road. Has a botanical garden with lots of outdoor landscaping, has carillon that you can tour. Great views. Plus there's concerts. Nice play area. Tennis and pickleball center, some ornate pavilions, lakes, a 'boardwalk' along one of the lakes. Varied terrain. Lots of large trees and shade. Ice cream stand in the Summer. Can get rather crowded around the botanical garden as it attracts weddings and other events. Wish there were more bathrooms."
   },
   {
-    "name": "Winchester",
-    "class": "winchester",
-    "rating": 0,
+    "name": "Westchester",
+    "class": "westchester",
+    "rating": 2.5,
     "location": "",
     "url": "",
-    "notes": "Haven't visited yet."
+    "notes": "Small park. Just playground equipment,some benches and picnic tables. Looks well kept with plenty of shade."
   }
 ];
 
