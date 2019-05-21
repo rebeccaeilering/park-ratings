@@ -250,10 +250,10 @@ const parks = [
   {
     "name": "Vredenburgh",
     "class": "vredenburgh",
-    "rating": 0,
+    "rating": 2.5,
     "location": "",
     "url": "",
-    "notes": "Haven't visited yet."
+    "notes": "Small park. Clean. Some areas of trees and shade on the peremeter of the park. Has playground area, ballfield, and a couple basketball hoops. Has access to bike trail."
   },
   {
     "name": "Washington",
