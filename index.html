@@ -8,41 +8,43 @@
   <title>Springfield Park Rater</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
   <link rel="stylesheet" href="main.css">
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
 </head>
 
 <body>
   <header>
-    <div class="inner">
+    <div class="container">
       <div class="title">
-          <h1>Springfield Parks Rater</h1>
+        <h1>Springfield Parks Rater</h1>
       </div>
     </div>
   </header>
   <section class="intro">
-    <div class="inner">
+    <div class="container">
       <p>This is just one person's opinion of the quality of Springfield's Parks. This doesn't include baseball parks or golf courses. Learn more about Springfield Parks on the <a href="http://www.springfieldparks.org/" target="_blank">Springfield Parks District's website</a>.</p>
     </div>
   </section>
-  <main class="container">
-    <!-- <select name="park select" id="park-select" class="custom-select">
-      <option value="0" disabled selected>Select Park</option>
-      <option value="carpenter">Carpenter Park</option>
-      <option value="centinnial">Centennial Park</option>
-      <option value="lincoln">Lincoln Park</option>
-      <option value="southwind">Southwind Park</option>
-      <option value="washington">Washington Park</option>
-    </select>
-    <input type="number" id="rating-control" step="0.1" max="5" name="rating control" placeholder="Rate 1 - 5" disabled> -->
-      <div id="parks" class="inner inner-content">
+  <main>
+    <div class="container parks-container">
+      <div id="parks" class="parks-content">
       </div>
-    </main>
-    <footer class="footer">
-        <div class="inner">
-          <small>&copy; 2019 Rebecca Eilering</small>
-        </div>
-    </footer>
-  </div>
+      <div class="parks-map">
+        <h2>Springfield, IL</h2>
+        <div id="mapid"></div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <small>&copy; 2019 Rebecca Eilering</small>
+    </div>
+  </footer>
   <script src="main.js"></script>
 </body>
 

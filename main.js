@@ -273,76 +273,92 @@ const parks = [
   }
 ];
 
-    // total stars
-    const starsTotal = 5;
+// total stars
+const starsTotal = 5;
 
-    // run getRatings when DOM loads
-    document.addEventListener('DOMContentLoaded', getParks);
-    // document.addEventListener('DOMContentLoaded', getRatings);
+// run getRatings when DOM loads
+document.addEventListener('DOMContentLoaded', getParks);
+// document.addEventListener('DOMContentLoaded', getRatings);
 
 
-    // form elements
-    // const parkSelect = document.getElementById('park-select');
-    // const ratingControl = document.getElementById('rating-control');
+// form elements
+// const parkSelect = document.getElementById('park-select');
+// const ratingControl = document.getElementById('rating-control');
 
-    // init park
-    // let park;
+// init park
+// let park;
 
-    // park select change
-    // parkSelect.addEventListener('change', (e) => {
-    //   park = e.target.value;
-    //   console.log(park);
-      //enable rating control
-    //   ratingControl.disabled = false;
-    //   ratingControl.value = ratings[park];
-    // });
+// park select change
+// parkSelect.addEventListener('change', (e) => {
+//   park = e.target.value;
+//   console.log(park);
+  //enable rating control
+//   ratingControl.disabled = false;
+//   ratingControl.value = ratings[park];
+// });
 
-    // rating control change
-    // ratingControl.addEventListener('blur', (e) => {
-    //   const rating = e.target.value;
-      // make sure 5 or under
-      // if(rating > 5) {
-      //   alert('Please rate 1 - 5');
-      //   return;
-      // }
-      // change rating
-    //   ratings[park] = rating;
-    //   getRatings();
-    // })
+// rating control change
+// ratingControl.addEventListener('blur', (e) => {
+//   const rating = e.target.value;
+  // make sure 5 or under
+  // if(rating > 5) {
+  //   alert('Please rate 1 - 5');
+  //   return;
+  // }
+  // change rating
+//   ratings[park] = rating;
+//   getRatings();
+// })
 
-    function getParks() {
-      let output = '';
-      for(let park in parks) {
-        const starPercentage = (parks[park].rating / starsTotal) * 100;
-        console.log(starPercentage);
-        const starPercentageRounded = `${Math.floor(starPercentage / 10) * 10}%`;
-        console.log(starPercentageRounded);
-        output += 
-        `<div class="park ${parks[park].class}">
-          <h2>${parks[park].name}</h2>
-          <div class="rating-outer">
-            <div class="rating">
-              <span>Score: </span>
-              <div class="stars-outer">
-                <div class="stars-inner" style="width:${starPercentageRounded}";></div>
-              </div>
-              <span class="number-rating">${parks[park].rating}/5</span>
-              <div class="review"><p>Notes: ${parks[park].notes}</p>
-              </div>
-            </div>
+function getParks() {
+  let output = '';
+  for(let park in parks) {
+    const starPercentage = (parks[park].rating / starsTotal) * 100;
+    console.log(starPercentage);
+    const starPercentageRounded = `${Math.floor(starPercentage / 10) * 10}%`;
+    console.log(starPercentageRounded);
+    output += 
+    `<div class="park ${parks[park].class}">
+      <h2>${parks[park].name}</h2>
+      <div class="rating-outer">
+        <div class="rating">
+          <span>Score: </span>
+          <div class="stars-outer">
+            <div class="stars-inner" style="width:${starPercentageRounded}";></div>
           </div>
-        </div>`;
-      }
-      document.getElementById('parks').innerHTML = output;
-    }
+          <span class="number-rating">${parks[park].rating}/5</span>
+          <div class="review"><p>Notes: ${parks[park].notes}</p>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }
+  document.getElementById('parks').innerHTML = output;
+}
 
-    // function getRatings() {
-    //   for(let park in parks) {
-    //     const starPercentage = (parks[park].rating / starsTotal) * 100;
-    //     const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
-    //     document.querySelector(`.${parks[park].name} .stars-inner`).style.width = starPercentageRounded;
-    //     document.querySelector(`.${parks[park].name} .number-rating`).innerHTML = parks[park].rating;
-    //   }
-    // }
+// function getRatings() {
+//   for(let park in parks) {
+//     const starPercentage = (parks[park].rating / starsTotal) * 100;
+//     const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
+//     document.querySelector(`.${parks[park].name} .stars-inner`).style.width = starPercentageRounded;
+//     document.querySelector(`.${parks[park].name} .number-rating`).innerHTML = parks[park].rating;
+//   }
+// }
+
+const mymap = L.map('mapid').setView([39.7817213, -89.6501481], 11);
+
+const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">Open Street Map</a> contributors';
+const tileURL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+const tiles = L.tileLayer(tileURL, {
+  attribution
+});
+tiles.addTo(mymap);
+const washington = L.marker([39.7899972,-89.6780544]).addTo(mymap);
+washington.bindTooltip("Washington Park");
+const lincoln = L.marker([39.8270151,-89.6539577]).addTo(mymap);
+lincoln.bindTooltip("Lincoln Park");
+const centinnial = L.marker([39.7568039,-89.7582963]).addTo(mymap);
+centinnial.bindTooltip("Centinnial Park");
+
 
 
