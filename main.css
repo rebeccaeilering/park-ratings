@@ -55,17 +55,12 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100px;
-}
-header .inner {
-  display: flex;
-  align-items: center;
-  height: 100%;
+  padding: 20px 0;
 }
 
 @media (min-width: 769px) {
   header {
-    height: 200px;
+    padding: 60px 0;
   }
 }
 

@@ -137,11 +137,11 @@ const parks = [
   {
     "name": "Indian Hills",
     "class": "indianhills",
-    "rating": 0,
-    "latatude": "",
-    "longitude": "",
+    "rating": 2,
+    "latatude": "39.836507",
+    "longitude": "-89.623631",
     "url": "",
-    "notes": "Haven't visited yet."
+    "notes": "Small neighborhood park. Has playground and some ball fields. Large open areas with not much shade. Clean. Tennis courts that could use some TLC"
   },
   {
     "name": "Jaycee",
