@@ -306,6 +306,15 @@ const parks = [
     "notes": "Once I figure out how to get to the park, I'll go."
   },
   {
+    "name": "Village of Sherman - Village Park",
+    "class": "sherman",
+    "rating": 3.5,
+    "latatude": "39.880995",
+    "longitude": "-89.6146933",
+    "url": "",
+    "notes": "Fairly new park. Clean. Nice pavilions. There's an ampatheater and a decent paved walking path around the perimeter. Not a whole lot of trees"
+  },
+  {
     "name": "Vredenburgh",
     "class": "vredenburgh",
     "rating": 2.5,
