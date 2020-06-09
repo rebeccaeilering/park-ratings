@@ -24,7 +24,7 @@ const parks = [
     "latatude": "39.8701363",
     "longitude": "-89.6342159",
     "url": "",
-    "notes": "This is a good park to go hiking at. Nice views of the Sangamon River. Ranges from wooded to grassland. Trail difficulties vary. Nice stone pavilion."
+    "notes": "This is a good park to go hiking at. Nice views of the Sangamon River. Ranges from wooded to grassland. Trail difficulties vary. The trails are prone to flooding and it can be very muddy. Nice stone pavilion."
   },
   {
     "name": "Centinnial",
@@ -102,10 +102,10 @@ const parks = [
     "name": "Gietl",
     "class": "gietl",
     "rating": 3,
-    "latatude": "",
-    "longitude": "",
+    "latatude": "39.8251031",
+    "longitude": "-89.6163857",
     "url": "",
-    "notes": ""
+    "notes": "This is a small neighborhood park with a playground, some ball fields. It also has a swimming pool. When I went it was very wet so walking around wasn't too fun."
   },
   {
     "name": "Gurgens",
